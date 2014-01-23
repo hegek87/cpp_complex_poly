@@ -10,5 +10,12 @@ int main(void){
 	ComplexPoly poly(coeff, 2);
 	Complex res = poly.evaluate(c4);
 	std::cout << res << std::endl;
+	
+	Complex c5(2,3), c6(3,4), c7(8,2);
+	Complex data[3] = {c5,c6,c7};
+	ComplexPoly cp(data, 2);
+	Complex result = cp.evaluate(c4);
+	std::cout << result << std::endl;
+	std::cout << cp << std::endl;
 	return 0;
 }

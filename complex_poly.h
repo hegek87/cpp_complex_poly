@@ -10,5 +10,6 @@ class ComplexPoly{
 		ComplexPoly(std::vector<Complex>, int);
 		ComplexPoly(Complex[], int);
 		Complex evaluate(Complex);
+		friend std::ostream& operator<<(std::ostream&, const ComplexPoly&);
 };
 #endif
