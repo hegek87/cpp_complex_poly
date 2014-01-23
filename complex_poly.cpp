@@ -14,7 +14,11 @@ ComplexPoly::ComplexPoly(Complex coeff[], int deg){
 }*/
 
 Complex ComplexPoly::evaluate(Complex val){
-	return Complex(0,0);
+	Complex fVal = this->coeffs[0];
+	for(int i = 0; i < this->degree; ++i){
+		fVal = fVal + (this->coeffs[i+1] * val.pow(i+1));
+	}
+	return fVal;
 }
 	
 		
